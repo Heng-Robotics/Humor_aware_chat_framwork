@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="pepper_adaptive_humor" type="camera.py" name="camera" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="robot_camera.py" name="pepper_camera" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="robot_behavior.py" name="robot_behavior" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="captioning.py" name="captioning" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="gpt_assistant.py" name="gpt_assistant" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="robot_chat.py" name="robot_chat" output="screen" />
+  <node pkg="pepper_adaptive_humor" type="select_joke.py" name="joke_teller_node" output="screen" />
+<node name="rosbag_record" pkg="rosbag" type="record" args="-O /home/humor_robot/test.bag /camera_raw" output="screen" />
+</launch>
+
